@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+:root{
+    --green:#008000;
+    --black:#354046;
+}
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    border: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+   
+    font-weight: 500;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: var(--black);
+    color: #fff;
+}
+
+html{
+    font-size: 65%;
+    overflow-x: hidden ;
+}
+
+body{
+    overflow-x: hidden;
+    height: 3000px;
+}
+
+header{
+    width:100%;
+    position: fixed;
+    top: 0; left: 0;
+    padding: 2rem 1rem;
+    z-index: 1000;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .container .logo{
+    font-size: 3rem;
+
+}
+header .container .logo span{
+    color: var(--green);
+
+}
+
+header a{
+    color: var(--black);
+
+}
+header a:hover{
+    color: var(--green);
+}
+
+header .nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    list-style: none;
+}
+header .nav ul li{
+    margin: 0 1rem;
+}
+header .nav ul li a{
+    font-size: 2rem;
+}
+
+header .fa-bars{
+    font-size: 3.5rem;
+    color:var(--green);
+    cursor: pointer;
+    display: none;
+
+}
+
+header .fa-times{
+    transform: rotate(180deg);
+}
+section{
+    overflow: hidden;
+}
+
+.about {
+    background-color:gainsboro;
+}
+.about .content .box {
+    margin: 10rem 0;
+}
+.about .content .box h1{
+    font-size: 50px;
+}
+
+
+/*media query*/
+@media (max-width:768px){
+    html{
+        font-size: 55%;
+    }
+    header .fa-bars{
+        display:block;
+    }  
+    header .nav{
+        position: fixed;
+        top: -100rem;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow:0 0 0 100vh rgba(0, 0, 0,.3);
+        border-radius: .5rem;
+        border: .3rem solid var(--green) !important;
+        background: #fff;
+        width: 95%;
+        opacity:0;
+        
+    }
+    
+
+
+
+header .nav ul{
+    width: 100%;
+    flex-flow: column;
+    padding: 2rem 0;
+
+}
+
+header .nav ul li{
+    width:100%;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+header .nav ul li a{
+    font-size: 2rem;
+    display: block;
+
+}
+
+header .nav-toggle {
+    top: 50%;
+    opacity: 1;
+}
+
+}
+ 
+.gallery{
+    min-height: 100vh;
+}
+.gallery .box-container {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1px;
+    
+}
+
+.gallery .box-container .box{
+    height: 20rem;
+    width: 29rem;
+    margin: 3rem;
+    overflow: hidden;
+   
+}
+
+.gallery {
+    background-color: gainsboro;
+}
+
+.gallery .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 75px;
+}
+
+.gallery .box-container .box:hover img{
+    transform: scale(1.5);
+}
+
+.review {
+    background-image: url('pic/bg1.jpg');
+    
+}
+
+.review .box-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+}
+.review .box-container .box{
+    background: white;
+    width: 30rem;
+    margin: 5rem 1rem;
+    padding: 1.5rem;
+    position: relative; 
+}
+.review .box-container .box img{
+    position: absolute;
+    bottom: -7rem; left:-1rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box-container .box::before{
+    content: '';
+    position: absolute;
+    bottom: -1rem;left: 0.4rem;
+    height: 2rem;
+    width: 2rem;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.contact{
+    background-color: gainsboro;
+}
+
+.contact form{
+    text-align: center;
+}
+
+.contact form .inputbox{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.contact form .inputbox input{
+    height: 4rem;
+    width: 100%;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: var(--black);
+    
+}
+
+.footer{
+    background-color:darkred;
+    padding-top: 1rem;
+}
+.footer p{
+    color:black;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+#last{
+    padding: 1rem;
+}
+
+.footer h3{
+    font-size: 2rem;
+}
+.footer a{
+    font-size: 1.5rem;
+    color:black;
+    display: block;
+}
+
+
+.footer a:hover{
+    color: green;
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+
